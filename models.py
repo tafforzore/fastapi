@@ -1,7 +1,8 @@
-from sqlalchemy import Table, Column, Integer, String, MetaData
+from sqlalchemy import Column, Integer, String, MetaData, Table
 
 metadata = MetaData()
 
+# Définition du modèle de données
 users = Table(
     "users",
     metadata,
