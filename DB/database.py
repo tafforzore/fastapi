@@ -1,24 +1,27 @@
-from sqlalchemy import create_engine, Column, Integer, String, MetaData, Table
-from databases import Database
+from sqlalchemy import create_engine, MetaData
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 DATABASE_URL = "sqlite:///./test.db"
+
 engine = create_engine(DATABASE_URL)
+Base = declarative_base()
 metadata = MetaData()
+Base.metadata.create_all(bind=engine)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-users = Table(
-    "users",
-    metadata,
-    Column("id", Integer, primary_key=True, index=True),
-    Column("name", String, index=True),
-)
+def start_bd(app):
+    @app.on_event("startup")
+    def startup_db():
+        engine.connect()
 
-metadata.create_all(bind=engine)
-database = Database(DATABASE_URL)
+    @app.on_event("shutdown")
+    def shutdown_db():
+        engine.close()
 
 def get_db():
-    db = None
+    db = SessionLocal()
     try:
-        db = database
         yield db
     finally:
         db.close()
