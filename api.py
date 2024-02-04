@@ -1,18 +1,30 @@
-from fastapi import APIRouter, Depends, HTTPException, status  # Ajoutez l'importation de status
-from sqlalchemy.orm import Session
-from models import Post
-from crud import create_post, get_post
-from database import SessionLocal
+from fastapi import APIRouter, HTTPException, Depends
+from crud import create_user, read_user, update_user, delete_user
 
-router = APIRouter()
+user_router = APIRouter()
 
-@router.post("/posts/", response_model=Post, status_code=status.HTTP_201_CREATED)
-async def create_post(post: Post, db: Session = Depends(SessionLocal)):
-    return create_post(db, post)
+@user_router.post("/", response_model=dict)
+async def create_user_api(name: str):
+    user_id = await create_user(name)
+    return {"user_id": user_id}
 
-@router.get("/posts/{post_id}", response_model=Post)
-async def read_post(post_id: int, db: Session = Depends(SessionLocal)):
-    post = get_post(db, post_id)
-    if post is None:
-        raise HTTPException(status_code=404, detail="Post not found")
-    return post
+@user_router.get("/{user_id}", response_model=dict)
+async def read_user_api(user_id: int):
+    user = await read_user(user_id)
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    return user
+
+@user_router.put("/{user_id}", response_model=dict)
+async def update_user_api(user_id: int, new_name: str):
+    updated_user = await update_user(user_id, new_name)
+    if updated_user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    return updated_user
+
+@user_router.delete("/{user_id}", response_model=dict)
+async def delete_user_api(user_id: int):
+    deleted_user = await delete_user(user_id)
+    if deleted_user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    return {"message": "User deleted successfully"}
