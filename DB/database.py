@@ -5,7 +5,6 @@ DATABASE_URL = "sqlite:///./test.db"
 engine = create_engine(DATABASE_URL)
 metadata = MetaData()
 
-# Définition du modèle de données
 users = Table(
     "users",
     metadata,
@@ -13,8 +12,13 @@ users = Table(
     Column("name", String, index=True),
 )
 
-# Création de la base de données
 metadata.create_all(bind=engine)
-
-# Configuration de la connexion à la base de données
 database = Database(DATABASE_URL)
+
+def get_db():
+    db = None
+    try:
+        db = database
+        yield db
+    finally:
+        db.close()
