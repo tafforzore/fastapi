@@ -14,8 +14,9 @@ blueprint = APIRouter()
 #         raise HTTPException(status_code=404, detail="User not found")
 #     return user
 
-@blueprint.post("/user/")
+@blueprint.post("/create_user/")
 def create_user(item: Users, db: Session = Depends(get_db)):
+    print('ok')
     db_item = Users(**item.dict())
     db.add(db_item)
     db.commit()
