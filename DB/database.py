@@ -6,7 +6,7 @@ DATABASE_URL = "sqlite:///./sev.db"
 
 engine = create_engine(DATABASE_URL)
 Base = declarative_base()
-metadata = MetaData()
+metadata = MetaData()  
 Base.metadata.create_all(bind=engine)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
