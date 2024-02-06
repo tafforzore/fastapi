@@ -8,7 +8,7 @@ engine = create_engine(DATABASE_URL)
 Base = declarative_base()
 metadata = MetaData()  
 Base.metadata.create_all(bind=engine)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)  
 
 def start_bd(app):
     @app.on_event("startup")
