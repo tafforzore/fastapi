@@ -20,7 +20,21 @@ class Item(ItemBase):
 
 class UserBase(BaseModel):
     email: str
-
+    nom : str
+    second_nom : str
+    prenom : str
+    second_prenom : str
+    username : str
+    numeros : int
+    sexe : str
+    email : str
+    password : str
+    pays : str
+    profession : str
+    date_de_naissance : str
+    lieu_de_naissance : str
+    region : str
+    quartier : str
 
 class UserCreate(UserBase):
     password: str
@@ -30,7 +44,5 @@ class User(UserBase):
     id: int
     is_active: bool
     
-    items: list[Item] = []
-
     class Config:
         orm_mode = True
