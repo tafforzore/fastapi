@@ -13,7 +13,7 @@ data = {
     "username": "utilisateur123",
     "numeros": 456,
     "sexe": "Masculin",
-    "email": "utilisateurmm@example.com",
+    "email": "utilisat@example.com",
     "password": "MotDePasse123",
     "pays": "Pays",
     "profession": "Profession",

@@ -20,6 +20,10 @@ class Item(ItemBase):
 
 class UserBase(BaseModel):
     email: str
+    
+
+class UserCreate(UserBase):
+    password: str
     nom : str 
     second_nom : str 
     prenom : str 
@@ -33,9 +37,6 @@ class UserBase(BaseModel):
     lieu_de_naissance : str 
     region : str 
     quartier : str 
-
-class UserCreate(UserBase):
-    password: str
 
 
 class User(UserBase):
