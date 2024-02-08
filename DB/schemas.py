@@ -23,14 +23,14 @@ class UserBase(BaseModel):
     nom : str 
     second_nom : str 
     prenom : str 
-    second_prenom : str | None = None
+    second_prenom : str 
     username : str
     numeros : int
-    sexe : str | None = None
-    pays : str | None = None
-    profession : str | None = None
-    date_de_naissance : str | None = None
-    lieu_de_naissance : str | None = None
+    sexe : str
+    pays : str 
+    profession : str 
+    date_de_naissance : str 
+    lieu_de_naissance : str 
     region : str | None = None
     quartier : str | None = None
 
