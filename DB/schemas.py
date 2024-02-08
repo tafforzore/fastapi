@@ -31,8 +31,8 @@ class UserBase(BaseModel):
     profession : str 
     date_de_naissance : str 
     lieu_de_naissance : str 
-    region : str | None = None
-    quartier : str | None = None
+    region : str 
+    quartier : str 
 
 class UserCreate(UserBase):
     password: str
