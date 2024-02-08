@@ -20,9 +20,9 @@ class Item(ItemBase):
 
 class UserBase(BaseModel):
     email: str
-    nom : str | None = None
-    second_nom : str | None = None
-    prenom : str | None = None
+    nom : str 
+    second_nom : str 
+    prenom : str 
     second_prenom : str | None = None
     username : str
     numeros : int
