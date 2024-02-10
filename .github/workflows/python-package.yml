@@ -37,4 +37,6 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: docker start
       run: |
-        ls 
+        docker build -t dockerfile .
+        docker container ps
+        docker run -d --name mycontainer -p 5000:5000 dockerfile
