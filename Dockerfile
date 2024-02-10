@@ -3,6 +3,5 @@ RUN ls
 EXPOSE 5000
 RUN ls
 COPY ./ /app
-RUN pip install -r requirements.txt
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "5000"]
+CMD ["uvicorn", ".main:app", "--host", "0.0.0.0", "--port", "5000"]
