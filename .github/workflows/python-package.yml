@@ -38,5 +38,4 @@ jobs:
     - name: docker start
       run: |
         docker build -t dockerfile .
-        docker container ps
         docker run -d --name mycontainer -p 5000:5000 dockerfile
