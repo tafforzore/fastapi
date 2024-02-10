@@ -6,7 +6,7 @@ charset-normalizer==3.3.2
 click==8.1.7
 colorama==0.4.6
 databases==0.8.0
-exceptiongroup==1.2.0
+exceptiongroup==1.2.0 
 fastapi==0.109.0
 greenlet==3.0.3
 h11==0.14.0
