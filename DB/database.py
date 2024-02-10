@@ -7,7 +7,7 @@ from sqlalchemy.orm import sessionmaker
 
 username = 'severin'
 password = '*Severin123'
-host = '127.0.0.1'
+host = '127.0.0.1' 
 port = 5432
 database_name = 'inscription'
 SQLALCHEMY_DATABASE_URL = f"postgres://{username}:{password}@{host}:{port}/{database_name}"
