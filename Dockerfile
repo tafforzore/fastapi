@@ -1,7 +1,5 @@
 FROM python:3.9
-RUN cd ./
 RUN pip install -r requirements.txt
-RUN cd ../
 EXPOSE 5000
 COPY ./ /app
 
