@@ -41,6 +41,6 @@ jobs:
         docker run -d --name mycontainer -p 5000:5000 dockerfile
         docker ps -a
 
-    # - name: unit-test
-    #   run: |
-    #     python3 test.py
+    - name: unit-test
+      run: |
+        curl -sSL 0.0.0.0:5000 -o /users/
