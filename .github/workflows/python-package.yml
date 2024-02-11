@@ -39,3 +39,7 @@ jobs:
       run: |
         docker build -t dockerfile .
         docker run -d --name mycontainer -p 5000:5000 dockerfile
+
+    - name: unit-test
+      run: |
+        python3 test.py
