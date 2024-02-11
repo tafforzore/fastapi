@@ -43,4 +43,4 @@ jobs:
 
     - name: unit-test
       run: |
-        curl -sSL http://0.0.0.0:5000 -o /users/
+        curl -sSL http://localhost:5000 -o /users/
