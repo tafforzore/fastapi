@@ -1,7 +1,7 @@
 import requests
 
 # URL de l'API où vous voulez envoyer la requête POST
-url = "http://127.0.0.1:5000/users/"
+url = "http://0.0.0.0:5000/users/"
 
 # Données à envoyer dans la requête POST
 data = {
