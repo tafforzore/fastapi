@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from DB import models
-from DB.database import SessionLocal, engine
+from DB.database import engine
 from routes.routes import blueprint
 
 app = FastAPI()
