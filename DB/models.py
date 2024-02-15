@@ -5,7 +5,7 @@ from .database import Base
 
 
 class User(Base):
-    __tablename__ = "users"
+    __tablename__ = "Utilisateurs"
 
     id = Column(Integer, primary_key=True)
     nom = Column(String)
@@ -18,15 +18,8 @@ class User(Base):
     email = Column(String)
     password = Column(String)
     pays = Column(String)
-    profession = Column(String)
-    date_de_naissance = Column(String)
-    lieu_de_naissance = Column(String)
-    region = Column(String)
     quartier = Column(String)
     is_active = Column(Boolean, default=True)
-
-    ############cles publique#######
-    publique_key = Column(String)
 
 
  

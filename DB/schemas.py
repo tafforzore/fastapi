@@ -32,11 +32,9 @@ class UserCreate(UserBase):
     numeros : int
     sexe : str
     pays : str 
-    profession : str 
-    date_de_naissance : str 
-    lieu_de_naissance : str 
     region : str 
     quartier : str 
+    type_msg_send : str
 
 
 class User(UserBase):
