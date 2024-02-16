@@ -1,5 +1,6 @@
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
+from datetime import datetime
 
 from .database import Base
 
@@ -19,14 +20,17 @@ class User(Base):
     password = Column(String)
     pays = Column(String)
     ville = Column(String)
-    adresse = Column(String)
     quartier = Column(String)
+    adresse = Column(String)
 
     #verifier si le compte de utilisateur est actifs ou bloquer
     etats_compte = Column(Boolean, default=True)
 
     #verifier si un user est en ligne 
     is_active = Column(Boolean, default=False)
+    date_creation = Column(datetime, default=datetime.now)
+    date_connection = Column(datetime, default=datetime.mow)
+
 
 
  
