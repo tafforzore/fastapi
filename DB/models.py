@@ -30,7 +30,7 @@ class User(Base):
     is_active = Column(Boolean, default=False)
     date_creation = Column(datetime, default=datetime.now)
     date_connection = Column(datetime, default=datetime.mow)
-
+    
     ##uid de utilisateur
     uuid = Column(String, default=lambda: str(uuid.uuid4()))
 
