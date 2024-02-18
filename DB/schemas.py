@@ -23,19 +23,22 @@ class UserBase(BaseModel):
     email: str 
 
 class UserCreate(UserBase):
-    password: str
     nom : str 
     second_nom : str 
     prenom : str 
-    second_prenom : str 
+    second_prenom : str
     username : str
     numeros : int
     sexe : str
+    password: str
     pays : str 
-    region : str 
+    ville :str
     quartier : str 
-    type_msg_send : str
-
+    adresse : str
+    etats_compte : str
+    date_creation : str
+    date_connection : str
+    uuid : str
 
 class User(UserBase):
     id: int

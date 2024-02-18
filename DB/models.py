@@ -1,4 +1,4 @@
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, DateTime
 from sqlalchemy.orm import relationship
 from datetime import datetime
 import uuid
@@ -28,8 +28,8 @@ class User(Base):
 
     #verifier si un user est en ligne 
     is_active = Column(Boolean, default=False)
-    date_creation = Column(datetime, default=datetime.now)
-    date_connection = Column(datetime, default=datetime.mow)
+    date_creation = Column(DateTime, default=datetime.now)
+    date_connection = Column(DateTime, default=datetime.now)
     
     ##uid de utilisateur
     uuid = Column(String, default=lambda: str(uuid.uuid4()))
