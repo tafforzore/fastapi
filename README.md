@@ -1,4 +1,4 @@
-# Deploy FastAPI on Render
+# Deploy FastAPI on Render sede
 
 Use this repo as a template to deploy a Python [FastAPI](https://fastapi.tiangolo.com) service on Render.
 
