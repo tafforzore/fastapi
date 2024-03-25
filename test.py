@@ -30,5 +30,6 @@ data = {
 response = requests.post(url, json=data)
 
 # Affichage de la réponse
-print(response.status_code)  # Affiche le code d'état de la réponse
-print(response.text)  # Affiche le contenu de la réponse
+if response :
+    print(response.status_code)  # Affiche le code d'état de la réponse
+    print(response.text)  # Affiche le contenu de la réponse
