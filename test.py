@@ -23,7 +23,7 @@ data = {
     "region": "Région",
     "quartier": "Quartier",
     "is_active": True,
-    "publique_key": "Clé publique"
+    "publique_key": "Clé publiqddddue"
 }
 
 # Envoi de la requête POST
