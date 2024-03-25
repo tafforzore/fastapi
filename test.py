@@ -15,7 +15,7 @@ data = {
     "numeros": 456,
     "sexe": "Masculin",
     "email": "utilisat@example.com",
-    "password": "MotDePasse123",
+    "password": "MotDePasse123zzz",
     "pays": "Pays",
     "profession": "Profession",
     "date_de_naissance": "2000-01-01",
