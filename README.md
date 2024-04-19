@@ -26,6 +26,7 @@ See https://render.com/docs/deploy-fastapi or follow the steps below:
 * [Popular Extensions](https://github.com/chartjs/awesome)
 * [Popular Extensions](https://github.com/chartjs/awesome)
 * [Popular Extensions](https://github.com/chartjs/awesome)
+* [Popular Extensions](https://github.com/chartjs/awesome)
 
 Or simply click:
 
