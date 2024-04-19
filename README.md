@@ -23,6 +23,9 @@ See https://render.com/docs/deploy-fastapi or follow the steps below:
     ```
 
 6. Click Create Web Service.
+* [Popular Extensions](https://github.com/chartjs/awesome)
+* [Popular Extensions](https://github.com/chartjs/awesome)
+* [Popular Extensions](https://github.com/chartjs/awesome)
 
 Or simply click:
 
