@@ -22,6 +22,7 @@ See https://render.com/docs/deploy-fastapi or follow the steps below:
     uvicorn main:app --host 0.0.0.0 --port $PORT
     ```
 
+* [Popular Extensions](https://github.com/chartjs/awesome)
 6. Click Create Web Service.
 * [Popular Extensions](https://github.com/chartjs/awesome)
 * [Popular Extensions](https://github.com/chartjs/awesome)
